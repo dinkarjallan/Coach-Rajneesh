@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+main.container {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100vh;
+    background-color: lightsteelblue;
+}
+
+section {
+    height: 100vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    scroll-snap-align: start;
+}
+
+div.background {
+    /* background-color: rgba(0, 0, 0, .3); */
+    width: 90%;
+    height: 90%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+div.background div.welcome-text {
+    width: 100%;
+    /* background-color: green; */
+    height: 80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+div.background div.welcome-text h1.title {
+    font-weight: 900;
+    font-size: 90px; 
+    text-transform: uppercase;
+    cursor: default;
+}
+div.background div.welcome-text h3.subtitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 2em;
+    text-transform: uppercase;
+    cursor: default;
+}
+div.background div.welcome-text h6.info {
+    font-weight: 400;
+    /* font-size: 20px; */
+    text-transform: capitalize;
+    border-bottom: 2px solid whitesmoke;
+    cursor: default;
+}
