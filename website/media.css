@@ -1,0 +1,10 @@
+/* this file contains all the media queries */
+@media screen and (max-width:768px) {
+    nav.navbar ul.navigation {
+        width: 100%;
+    }
+    header nav.navbar {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
