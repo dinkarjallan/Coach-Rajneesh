@@ -1,7 +1,7 @@
 /* color pallete */
 /* primary: whitesmoke */
 /* Secondary: #E47F17 (Sunburst Orange) */
-/* Accent: #FDD341 (Caramel), #4A1B01 (Seal Brown) */
+/* Accent: #FFC038 (Caramel), #4A1B01 (Seal Brown) */
 
 * {
     margin: 0;
@@ -15,15 +15,23 @@
 /* ********************* */
 
 header nav.navbar {
-    position: absolute;
+    position: fixed;
+    top:0;
     z-index: 3;
-    background-image: linear-gradient(rgba(124, 55, 2, 0.651),rgba(124, 55, 2, 0.342),rgba(124, 54, 2, 0));
+    /* background-image: linear-gradient(rgba(124, 55, 2, 0.651),rgba(124, 55, 2, 0.342),rgba(124, 54, 2, 0)); */
     width: 100%;
-    height: 15%;
+    height: 10%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    background: rgba(255, 255, 255, 0.075);
+    box-shadow: 0 2px 32px 0 rgba(66, 66, 66, 0.288);
+    backdrop-filter: blur( 8.0px );
+    -webkit-backdrop-filter: blur( 8.0px );
+    /* border-radius: 10px; */
+    border: 1px solid rgba(255, 255, 255, 0.205);
+    transition: top 600ms;  /* style for the attached navbar (hidding navbar) */
 }
 nav.navbar ul li {
     list-style: none;
@@ -87,18 +95,134 @@ section.intro div.wrapper {
 section.intro div.wrapper div.heading h2 {
     font-size: 2.5em;
     text-align: center;
-    
 }
 section.intro div.wrapper div.intro-text p {
     font-size: 4.5em;
+    font-weight: 900;
     text-align: center;
     text-transform: capitalize;
     line-height: 1.2em;
 }
 section.intro div.wrapper div.intro-subtitle p {
     font-size: 1.1em;
-    letter-spacing: .1em;
+    letter-spacing: .6px;
+}
 
+
+/* ABOUT section */
+section.about {
+    height: 170vh;
+    background-image: url(./assets/about-bg.jpg);
+    /* opacity: %; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+section.about div.wrapper {
+    justify-content: space-evenly;
+}
+section.about div.wrapper div.heading {
+    background-color: whitesmoke;
+    /* opacity: .4; */
+    color: #E47F17;
+    border-radius: 20px;
+    width: 30%;
+    height: 10%;
+    text-align: center;
+}
+section.about div.wrapper div.heading h1 {
+    font-size: 2.5em;
+    opacity: 100%;
+    font-weight: 900;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section.about div.wrapper div.about-text {
+    background-color: white;
+    width: 70%;
+    padding: 2.5% 4%;
+    /* font-weight: 700; */
+    line-height: 1.5em;
+    letter-spacing: .6px;
+    border-radius: 20px
+}
+
+
+/* SERVICE section */
+section.service {
+    height: 70vh;
+}
+span.highlight {
+    color: #4A1B01;
+    background-color: #FFC038;
+    padding: 5px 10px;
+}
+section.service div.wrapper div.heading {
+    color: #FFC038 ;
+    text-transform: uppercase;
+    /* background-color: red; */
+    /* margin-top:100px; */
+    padding: 2% 2% 1% 2%;
+    font-size: larger;
+    line-height: 2.5em;
+    letter-spacing: .6px;
+}
+section.service div.wrapper div.content {
+    flex-grow: 2;
+    /* background-color: green; */
+    line-height: 1.5em;
+    letter-spacing: .6px;
+    padding: 2%;
+}
+
+
+/* CONTACT section */
+section.contact {
+    height: 100vh;
+    background-image: url(./assets/contact-bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+section.contact div.wrapper {
+    background-color: whitesmoke;
+    flex-direction: row-reverse;
+    border-radius: 20px;
+}
+section.contact div.wrapper div.image {
+    /* flex-grow: 1; */
+    width: 50%;
+}
+section.contact div.wrapper div.image img {
+    width: 80%;
+    margin: 0 auto;
+}
+section.contact div.wrapper div.text {
+    /* flex-grow: 1; */
+    width: 50%;
+    padding: 5em;
+    line-height: 1.5em;
+    letter-spacing: .6px;
+}
+section.contact div.wrapper div.text div.heading {
+    text-transform: capitalize;
+    font-size: larger;
+    line-height: 2.5em;
+    letter-spacing: .6px;
+}
+section.contact div.wrapper div.text div.content a.form-button {
+    border: 1px solid #4A1B01;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4A1B01;
+    background-color: #FFC038;
+    text-decoration: none;
 }
 
 
