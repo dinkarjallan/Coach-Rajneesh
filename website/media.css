@@ -1,49 +1,115 @@
 /* this file contains all the media queries */
 
-/* TABLET SCREEN */
-@media screen and (max-width:768px) {
-    /* navbar */
-    nav.navbar ul.navigation { width: 100%; }
-    header nav.navbar { flex-direction: column; justify-content: flex-start; }
-    /* hero section */
-    section.hero { background-attachment: scroll; }
-    section.hero div.wrapper div.welcome-text h1.title { font-size: 4em; }
-    /* about section */
-    section.about div.wrapper div.heading { width: 50%; }
-    section.about div.wrapper div.about-text { width: 90%; }
-    /* services section */
-    section.service { height: 80vh; }
-    section.service div.wrapper { width: 100%; }
-    /* contact section */
-    section.contact { height: 150vh; }
-    section.contact div.wrapper { width: 95%; flex-direction: column; }
-    section.contact div.wrapper div.text { padding: 10%; width: 100%; }
-    section.contact div.wrapper div.text div.heading { line-height: 4.5em; }
-    section.contact div.wrapper div.image { width: 70%; }
-    /* connect section */
-    section.connect div.wrapper div.options ul li { width: 45%; }
-}
-/* MOBILE SCREEN */
-@media screen and (max-width:376px) {
-    /* navbar section*/
-    /* ************** */
-    /* about section */
-    section.about { height: 200vh; }
-    section.about div.wrapper { width: 100%; height: 100%; }
-    section.about div.wrapper div.heading { width: 80%; }
+/* MOBILE devices */
+@media screen and (min-width:420px) {
     /* service section */
-    section.service { height: 130vh; }
+    /* section.service {
+        height: 110vh;
+    } */
+}
+
+/* TABLET devices */
+@media screen and (min-width: 620px) {
+    /* about section */
+    section.about {
+        height: 170vh;
+    }
+    section.about div.wrapper div.heading {
+        width: 70%;
+    }
+    section.about div.wrapper div.about-text {
+        width: 90%;
+    }
+    /* service section */
+    /* section.service {
+        height: 90vh;
+    } */
     /* contact section */
-    section.contact { height: 185vh; }
-    section.contact div.wrapper div.image { width: 100%; text-align: center; padding-top: 10%; }
-    section.contact div.wrapper div.text div.heading { line-height: 2.5em; }
+    section.contact {
+        height: 150vh;
+    }
+    section.contact div.wrapper div.image img {
+        width: 70%;
+    }
     /* connect section */
-    section.connect { height: 160vh; }
-    section.connect div.wrapper { width: 100%; height: 100%;}
-    section.connect div.wrapper div.options { height: 100%; }
-    section.connect div.wrapper div.options ul.list { flex-direction: column; align-items: center; }
-    section.connect div.wrapper div.options ul li {width: 80%; height: 45%;}
-    /* footer */
-    footer.footer {height: 70vh;}
-    footer.footer div.wrapper div.links {width: 70%;}
+    section.connect {
+        height: 170vh;
+    }
+    section.connect div.wrapper div.options ul li {
+        width: 60%;
+    }
+}
+
+/* LAPTOP devices */
+/* small laptops */
+@media screen and (min-width: 895px) {
+    /* intro section */
+    section.intro {
+        height: 60vh;
+    }
+    /* about section */
+    section.about {
+        height: 130vh;
+    }
+    section.about div.wrapper div.heading {
+        width: 50%;
+    }
+    /* contact section */
+    section.contact div.wrapper {
+        padding: 2%;
+    }
+    section.contact div.wrapper div.image {
+        padding-top: 5%;
+    }
+    section.contact div.wrapper div.image img {
+        width: 50%;
+    }
+    /* connect section */
+    section.connect {
+        height: 100vh;
+    }
+    section.connect div.wrapper div.options ul.list {
+        flex-direction: row;
+    }
+    section.connect div.wrapper div.options ul li {
+        width: 40%;
+        height: 75%;
+    }
+}
+
+/* big laptop */
+@media screen and (min-width: 1230px) {
+    /* hero section */
+    section.hero {
+        background-attachment: fixed;
+    }
+    /* about section */
+    section.about {
+        background-attachment: fixed;
+    }
+    section.about div.wrapper div.heading {
+        width: 40%;
+    }
+    section.about div.wrapper div.about-text {
+        width: 80%;
+    }
+    /* contact section */
+    section.contact {
+        background-attachment: fixed;
+        height: 120vh;
+    }
+    section.contact div.wrapper {
+        flex-direction: row-reverse;
+    }
+    section.contact div.wrapper div.image img {
+        width: 80%;
+    }
+    /* connect section */
+    section.connect div.wrapper div.options ul li {
+        width: 30%;
+    }
+    /* footer section */
+    footer.footer div.wrapper div.links {
+        width: 40%;
+    }
 }
