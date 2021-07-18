@@ -1,11 +1,11 @@
 /* this file contains all the media queries */
 
-/* MOBILE devices */
-@media screen and (min-width:420px) {
-    /* service section */
-    /* section.service {
-        height: 110vh;
-    } */
+/* for navbar */
+@media screen and (max-width: 768px) {
+    nav.navbar ul.buttons { position: absolute; top: 8vh; height: 92vh; width: 100%; background-color: #F5F5F5; flex-direction: column; align-items: center; transform: translateX(100%); transition: transform 500ms ease-in; }
+    header nav.navbar ul.buttons li { opacity: 0; }
+    header nav.navbar ul.nav-button { display: block; cursor: pointer; }
+    nav.navbar ul.buttons li a { color: #4A1B01; }
 }
 
 /* TABLET devices */
@@ -20,10 +20,6 @@
     section.about div.wrapper div.about-text {
         width: 90%;
     }
-    /* service section */
-    /* section.service {
-        height: 90vh;
-    } */
     /* contact section */
     section.contact {
         height: 150vh;
