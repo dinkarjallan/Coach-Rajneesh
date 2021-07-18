@@ -3,6 +3,60 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto Slab', serif; }
 
 /* navbar styles */
+nav.navbar {
+    height: 8vh;
+    background-color: #F5F5F5;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+nav.navbar ul.brand {
+    text-transform: uppercase;
+    color: #4A1B01;
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-size: x-large;
+    width: 50%;
+    text-align: center;
+}
+nav.navbar ul.buttons {
+    list-style: none;
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+nav.navbar ul.buttons li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #FFC038;
+}
+ul.nav-button {
+    margin-right: 5%;
+    display:none;
+}
+ul.nav-button div{
+    width: 25px;
+    height: 3px;
+    background-color: #4A1B01;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+/* toggling and nav animation class */
+@keyframes navLinkFade {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0px); }
+}
+.nav-active { transform: translateX(0%) !important; }
+.toggle .line1{ transform: rotate(45deg) translate(5px, 6px); }
+.toggle .line2{ opacity: 0; }
+.toggle .line3{ transform: rotate(-45deg) translate(5px, -6px); }
 
 /* body wrapper styles */
 main.container { min-height: 100vh; }
@@ -78,6 +132,7 @@ section.intro div.wrapper div.intro-text p {
 }
 section.intro div.wrapper div.intro-subtitle p {
     font-size: 1.1em;
+    color: #2c2c2c;
     letter-spacing: .6px;
 }
 
@@ -113,8 +168,9 @@ section.about div.wrapper div.heading h2 {
 }
 section.about div.wrapper div.about-text {
     background-color: #f5f5f5;
+    color: #2c2c2c;
     width: 100%;
-    padding: 2.5% 4%;
+    padding: 25px 20px;
     line-height: 1.5em;
     letter-spacing: .6px;
     border-radius: 20px
@@ -141,6 +197,7 @@ section.service div.wrapper div.heading {
 }
 section.service div.wrapper div.content {
     flex-grow: 2;
+    color: #2c2c2c;
     line-height: 1.5em;
     letter-spacing: .6px;
     padding: 2%;
@@ -171,6 +228,7 @@ section.contact div.wrapper div.image img {
     margin: 0 auto;
 }
 section.contact div.wrapper div.text {
+    color: #2c2c2c;
     width: 100%;
     padding: 1em;
     line-height: 1.5em;
@@ -216,6 +274,7 @@ section.connect div.wrapper div.heading {
     text-align: center;
     text-transform: capitalize;
     font-size: larger;
+    color: #2c2c2c;
     line-height: 2.5em;
     letter-spacing: .6px;
     padding: 2%;
@@ -240,6 +299,7 @@ section.connect div.wrapper div.options ul li {
     width: 80%;
     height: 45%;
     text-align: center;
+    color: #2c2c2c;
     box-shadow: 10px 10px 28px #d0d0d0, -10px -10px 28px #ffffff;
 }
 section.connect div.wrapper div.options ul li img.icon {
@@ -272,8 +332,10 @@ footer.footer div.wrapper {
     justify-content: space-evenly;
 }
 footer.footer div.wrapper div.heading {
+    color: #2c2c2c;
     font-size: 2em;
     line-height: 2em;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 footer.footer div.wrapper div.links {
@@ -287,13 +349,14 @@ footer.footer div.wrapper div.links {
 }
 footer.footer div.wrapper div.links li a {
     text-decoration: none;
-    color: black;
+    color: #2c2c2c;
 }
 footer.footer div.wrapper div.links li a:hover {
     color: #FFC038;
     transition: color .3s ease-in-out;
 }
 footer.footer div.wrapper div.credit {
+    color: #2c2c2c;
     line-height: 2em;
 }
 
